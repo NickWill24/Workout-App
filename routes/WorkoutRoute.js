@@ -13,4 +13,9 @@ Router.post('/strengthexercise', controller.strengthExercise )
 Router.post('/enduranceexercise', controller.enduranceExercise )
 
 
+Router.delete('/balanceexercise', controller.balanceExercise )
+Router.delete('/strengthexercise', controller.strengthExercise )
+Router.delete('/enduranceexercise', controller.enduranceExercise )
+
+
 module.exports = Router
