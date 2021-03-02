@@ -1,21 +1,22 @@
 const Router = require('express').Router()
-const controller = require('../controllers/workout')
+const balance = require('../controllers/balance')
+const endurance = require('../controllers/endurance')
+const strength = require('../controllers/strength')
+
+Router.get('/getBalance', balance.getBalance)
+Router.get('/getStrength', strength.getStrength)
+Router.get('/getEndurance', endurance.getEndurance)
 
 
-Router.get('/balanceexercise', controller.balanceExercise )
-Router.get('/strengthexercise', controller.strengthExercise )
-Router.get('/enduranceexercise', controller.enduranceExercise )
+
+Router.post('/createBalance', balance.createBalance)
+Router.post('/createStrength', strength.createStrength)
+Router.post('/createEndurance', endurance.createEndurance)
 
 
-
-Router.post('/balanceexercise', controller.balanceExercise )
-Router.post('/strengthexercise', controller.strengthExercise )
-Router.post('/enduranceexercise', controller.enduranceExercise )
-
-
-Router.delete('/balanceexercise', controller.balanceExercise )
-Router.delete('/strengthexercise', controller.strengthExercise )
-Router.delete('/enduranceexercise', controller.enduranceExercise )
+Router.delete('/deleteBalance', balance.deleteBalance)
+Router.delete('/deleteStrength', strength.deleteStrength)
+Router.delete('/deleteEndurance', endurance.deleteEndurance)
 
 
 module.exports = Router

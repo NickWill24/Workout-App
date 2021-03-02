@@ -4,11 +4,10 @@ const Schema = mongoose.Schema
 const Strength = new Schema(
 {
     exerciseItem: { type: String, required: false },
-    description: { type: String, required: true },
     time: { type: String, required: false },
     numOfRep: { type: String, required: false  },
-    image: { type: String, required: true },
-    
+    image: { type: String, required: false },
+    description: { type: String, required: true}
 },
 {
     timestamps: true
