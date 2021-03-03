@@ -16,12 +16,12 @@ export default class Balance extends Component{
     const{ name, time, description, image, numOfRep}= this.state
         return(
             <div>
-                <h1>Strength execrise</h1>
+                <h1>Balance execrise</h1>
                 <form onSubmit={handleSubmit}>
         <input
             type="text"
             name="name"
-            placeholder="Strength exercise"
+            placeholder="Balance exercise"
             value={name}
             onChange={handleChange}
             />
@@ -30,20 +30,20 @@ export default class Balance extends Component{
             type="text"
             name="image"
             value={image}
-            placeholder="Strength url exercise"
+            placeholder="Balance url exercise"
             onChange={handleChange}
             />
         <input
             type="text"
             name="time"
-            placeholder="Strength exercise time"
+            placeholder="Balance exercise time"
             value={time}
             onChange={handleChange}
             />
         <input
             type="text"
             name="description"
-            placeholder="Strength descrpiton"
+            placeholder="Balance descrpiton"
             value={description}
             onChange={handleChange}
             />

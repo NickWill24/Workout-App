@@ -26,6 +26,24 @@ getBalanceExecrise= async () =>{
     console.log('error')
   }
 }
+handleChange= (event) =>{
+    this.setState({enduranceArr: event.target.value})
+  }
+  handleChange= (event) =>{
+    this.setState({balanceArr: event.target.value})
+  }
+  handleChange= (event) =>{
+    this.setState({strengthArr: event.target.value})
+  }
+
+handleSubmit= async (e) =>{
+  e.preventDeafault()
+  try{
+    let response = await axios.post('http://localhost:3001/api/createBalance')
+  } catch(error){
+    console.log(error)
+  }
+}
 
 getEnduranceExecrise= async () =>{
   try{
