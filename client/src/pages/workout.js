@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 
 
-export default class Home extends Component {
+
+
+export default class Workout extends Component {
     render(){
         return(
             {
