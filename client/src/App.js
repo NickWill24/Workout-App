@@ -55,8 +55,10 @@ getStrengthExecrise= async () =>{
             <Route path="/workout" component={Workout}/>
             <Route path="/balance" component={(props)=>
               <Balance props={this.state.balanceArr}/>}/>
-            <Route path="/endurance" component={Endurance}/>
-            <Route path="/Strength" component={Strength}/>
+            <Route path="/endurance" component={(props)=>
+              <Endurance props={this.state.enduranceArr}/>}/>
+            <Route path="/Strength" component={(props)=>
+              <Strength props={this.state.strengthArr} />}/>
           </Switch>
         </main>
       </div>
