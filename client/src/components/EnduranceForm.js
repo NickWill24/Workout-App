@@ -14,6 +14,15 @@ export default class EnduranceForm extends Component{
     handleChange= (event) =>{
         this.setState({enduranceArr: event.target.value})
     }
+
+    handleSubmit= async (e) =>{
+        e.preventDefault()
+        try{
+            let response = await axios.post('http://localhost:3001/api/createEndurance')
+        } catch(error){
+            console.log(error)
+        }
+    }
     render(){
     const{ name, time, description, image, numOfRep}= this.state
         return(

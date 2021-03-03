@@ -18,6 +18,10 @@ class App extends Component {
     } 
   }
 
+componentDidMount(){
+  this.getBalanceExercise()
+}
+
 getBalanceExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getBalance')
