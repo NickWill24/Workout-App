@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Balance extends Component{
+export default class BalanceForm extends Component{
     constructor(){
         super()
         this.state={
@@ -11,7 +11,19 @@ export default class Balance extends Component{
             numOfRep:""
         }
     }
-    
+
+    handleChange= (event) =>{
+        this.setState({balanceArr: event.target.value})
+    }
+    handleSubmit= async (e) =>{
+        e.preventDefault()
+        try{
+            let response = await axios.post('http://localhost:3001/api/createBalance')
+        } catch(error){
+            console.log(error)
+        }
+    }
+
     render(){
     const{ name, time, description, image, numOfRep}= this.state
         return(

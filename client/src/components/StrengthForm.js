@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Balance extends Component{
+export default class StrengthForm extends Component{
     constructor(){
         super()
         this.state={
@@ -10,6 +10,11 @@ export default class Balance extends Component{
             description:"",
             numOfRep:""
         }
+    }
+    
+
+    handleChange= (event) =>{
+        this.setState({strengthArr: event.target.value})
     }
     
     render(){

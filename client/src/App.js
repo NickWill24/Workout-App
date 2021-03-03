@@ -18,7 +18,7 @@ class App extends Component {
     } 
   }
 
-getBalanceExecrise= async () =>{
+getBalanceExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getBalance')
     console.log(response)
@@ -26,26 +26,12 @@ getBalanceExecrise= async () =>{
     console.log('error')
   }
 }
-handleChange= (event) =>{
-    this.setState({enduranceArr: event.target.value})
-  }
-  handleChange= (event) =>{
-    this.setState({balanceArr: event.target.value})
-  }
-  handleChange= (event) =>{
-    this.setState({strengthArr: event.target.value})
-  }
 
-handleSubmit= async (e) =>{
-  e.preventDeafault()
-  try{
-    let response = await axios.post('http://localhost:3001/api/createBalance')
-  } catch(error){
-    console.log(error)
-  }
-}
 
-getEnduranceExecrise= async () =>{
+
+
+
+getEnduranceExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getEndurance')
     console.log(response)
@@ -54,7 +40,7 @@ getEnduranceExecrise= async () =>{
   }
 }
 
-getStrengthExecrise= async () =>{
+getStrengthExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getStrength')
     console.log(response)

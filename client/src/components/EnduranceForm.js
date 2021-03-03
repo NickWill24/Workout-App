@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Balance extends Component{
+export default class EnduranceForm extends Component{
     constructor(){
         super()
         this.state={
@@ -11,7 +11,9 @@ export default class Balance extends Component{
             numOfRep:""
         }
     }
-    
+    handleChange= (event) =>{
+        this.setState({enduranceArr: event.target.value})
+    }
     render(){
     const{ name, time, description, image, numOfRep}= this.state
         return(
