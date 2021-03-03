@@ -12,14 +12,24 @@ const createEndurance= async (req, res) => {
     }
 }
 
-
-const getEndurance = async (req, res) =>{
+const getEnduranceById = async (req, res) =>{
     try{
         const { id } = req.params; 
         const get = await Endurance.findById(id)
         if (get){
-            return res.status(200).send("Find Endurance exercise");
+            return res.status(200).json({get});
         }
+    } catch (error){
+        throw new Error("Endurance exercise not found");
+        
+    }
+}
+
+
+const getEndurance = async (req, res) =>{
+    try{
+        const endurances = await Endurance.find()
+        return res.status(200).send({ endurances });
     } catch (error){
         throw new Error("Endurance exercise not found");
         
@@ -43,5 +53,6 @@ const deleteEndurance = async (req, res) => {
 module.exports= {
     createEndurance, 
     deleteEndurance,
-    getEndurance 
+    getEndurance,
+    getEnduranceById
 }

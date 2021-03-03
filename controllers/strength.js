@@ -12,14 +12,23 @@ const createStrength = async (req, res) => {
     }
 }
 
-
-const getStrength = async (req, res) =>{
+const getStrengthById = async (req, res) =>{
     try{
         const { id } = req.params; 
         const get = await Strength.findById(id)
         if (get){
-            return res.status(200).send("Find Strength exercise");
+            return res.status(200).json({get});
         }
+    } catch (error){
+        throw new Error("Balance exercise not found");
+        
+    }
+}
+
+const getStrength = async (req, res) =>{
+    try{
+        const strengths = await Strength.find()
+            return res.status(200).json({ strengths });
     } catch (error){
         throw new Error("Strength exercise not found");
         
@@ -42,5 +51,6 @@ const deleteStrength = async (req, res) => {
 module.exports={
     createStrength,
     getStrength,
-    deleteStrength
+    deleteStrength,
+    getStrengthById
 }
