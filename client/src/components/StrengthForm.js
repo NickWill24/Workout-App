@@ -32,6 +32,7 @@ export default class StrengthForm extends Component{
             <div>
                 <h1>Strength execrise</h1>
                 <form onSubmit={this.handleSubmit}>
+                <button>Add Execrise</button>
         <input
             type="text"
             name="name"
@@ -68,6 +69,7 @@ export default class StrengthForm extends Component{
             value={numOfRep}
             onChange={this.handleChange}
             />
+            <button>Submit</button>
             </form>
             </div>
         )
