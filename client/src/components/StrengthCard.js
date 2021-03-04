@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../styles/Card.css'
 
-export default class BalanceCard extends Component {
+export default class StrengthCard extends Component {
     constructor(){
         super()
         this.state={

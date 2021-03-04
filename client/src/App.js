@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
-import Workout from './pages/Workout'
 import Balance from './pages/Balance'
 import Endurance from './pages/Endurance'
 import Strength from './pages/Strength'
@@ -67,13 +66,12 @@ getStrengthExercise= async () =>{
           <Switch>
             
             <Route exact path="/" component={Home}/>
-            <Route path="/workout" component={Workout}/>
             <Route path="/balance" component={(props)=>
               <Balance balances={this.state.balanceArr}/>}/>
             <Route path="/endurance" component={(props)=>
-              <Endurance props={this.state.enduranceArr}/>}/>
+              <Endurance endurances={this.state.enduranceArr}/>}/>
             <Route path="/Strength" component={(props)=>
-              <Strength props={this.state.strengthArr} />}/>
+              <Strength strengths={this.state.strengthArr} />}/>
           </Switch>
         </main>
       </div>
