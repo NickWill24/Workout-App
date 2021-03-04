@@ -69,7 +69,7 @@ getStrengthExercise= async () =>{
             <Route exact path="/" component={Home}/>
             <Route path="/workout" component={Workout}/>
             <Route path="/balance" component={(props)=>
-              <Balance props={this.state.balanceArr}/>}/>
+              <Balance balances={this.state.balanceArr}/>}/>
             <Route path="/endurance" component={(props)=>
               <Endurance props={this.state.enduranceArr}/>}/>
             <Route path="/Strength" component={(props)=>
