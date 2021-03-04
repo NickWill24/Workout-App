@@ -30,6 +30,7 @@ export default class EnduranceForm extends Component{
             <div>
                 <h1>Endurance execrise</h1>
                 <form onSubmit={this.handleSubmit}>
+                <button>Add Execrise</button>
         <input
             type="text"
             name="name"
@@ -67,6 +68,7 @@ export default class EnduranceForm extends Component{
             onChange={this.handleChange}
             />
             </form>
+            <button>Submit</button>
             </div>
         )
     }
