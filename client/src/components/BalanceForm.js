@@ -69,6 +69,7 @@ export default class BalanceForm extends Component{
             onChange={this.handleChange}
             />
             </form>
+            <button>Add Execrise</button>
             </div>
         )
     }
