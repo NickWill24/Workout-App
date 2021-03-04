@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import EnduranceCard from '../components/EnduranceCard'
+import EnduranceForm from '../components/EnduranceForm'
+
 
 export default class Endurance extends Component {
     constructor(){
@@ -13,7 +15,8 @@ export default class Endurance extends Component {
         if(this.props){
         return(
             <div>
-                <h1>Balance</h1>
+                <h1>Endurance</h1>
+                <EnduranceForm/>
                 {this.props.endurances.map((endurance, index)=>(
                     <EnduranceCard 
                         key={index} 
