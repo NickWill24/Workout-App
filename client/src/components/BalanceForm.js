@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+
 
 export default class BalanceForm extends Component{
     constructor(){
@@ -29,13 +31,13 @@ export default class BalanceForm extends Component{
         return(
             <div>
                 <h1>Balance execrise</h1>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
         <input
             type="text"
             name="name"
             placeholder="Balance exercise"
             value={name}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
             
         <input
@@ -43,28 +45,28 @@ export default class BalanceForm extends Component{
             name="image"
             value={image}
             placeholder="Balance url exercise"
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
         <input
             type="text"
             name="time"
             placeholder="Balance exercise time"
             value={time}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
         <input
             type="text"
             name="description"
             placeholder="Balance descrpiton"
             value={description}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
         <input
             type="text"
             name="numOfRep"
             placeholder="Number of rep"
             value={numOfRep}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
             </form>
             </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BalanceCard from '../components/BalanceCard'
+import BalanceForm from '../components/BalanceForm'
 
 export default class Balance extends Component {
     constructor(){
@@ -14,6 +15,7 @@ export default class Balance extends Component {
         return(
             <div>
                 <h1>Balance</h1>
+                <BalanceForm/>
                 {this.props.balances.map((balance, index)=>(
                     <BalanceCard 
                         key={index} 

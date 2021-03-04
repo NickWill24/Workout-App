@@ -16,6 +16,7 @@ export default class BalanceCard extends Component {
                 <p>{description}</p>
                 <p>{numOfRep}</p>
                 <p>{time}</p>
+                
             </div>
         )
         }
