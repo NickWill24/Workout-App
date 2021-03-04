@@ -20,9 +20,11 @@ export default class Home extends Component {
                         Endurance
                     </div>
                 </Link>
+                <Link>
                     <div className="category">
                         Strength
                     </div>
+                </Link>
                 </div>
             </div>
         )
