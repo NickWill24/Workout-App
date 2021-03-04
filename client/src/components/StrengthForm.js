@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class StrengthForm extends Component{
     constructor(){
@@ -30,13 +31,13 @@ export default class StrengthForm extends Component{
         return(
             <div>
                 <h1>Strength execrise</h1>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
         <input
             type="text"
             name="name"
             placeholder="Strength exercise"
             value={name}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
             
         <input
@@ -44,28 +45,28 @@ export default class StrengthForm extends Component{
             name="image"
             value={image}
             placeholder="Strength url exercise"
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
         <input
             type="text"
             name="time"
             placeholder="Strength exercise time"
             value={time}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
         <input
             type="text"
             name="description"
             placeholder="Strength descrpiton"
             value={description}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
         <input
             type="text"
             name="numOfRep"
             placeholder="Number of rep"
             value={numOfRep}
-            onChange={handleChange}
+            onChange={this.handleChange}
             />
             </form>
             </div>

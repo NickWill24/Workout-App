@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import StrengthCard from '../components/StrengthCard'
+import StrengthForm from "../components/StrengthForm"
 
 export default class Strength extends Component {
     constructor(){
@@ -14,6 +15,7 @@ export default class Strength extends Component {
         return(
             <div>
                 <h1>Strength</h1>
+                <StrengthForm/>
                 {this.props.strengths.map((strength, index)=>(
                     <StrengthCard 
                         key={index} 
