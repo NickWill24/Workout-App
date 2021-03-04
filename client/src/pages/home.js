@@ -5,6 +5,16 @@ export default class Home extends Component {
         return(
             <div className="home">
                 <h1>Home</h1>
+                <p>Pick A Catergory</p>
+                <div>
+                    Balance
+                </div>
+                <div>
+                    Endurance
+                </div>
+                <div>
+                    Strength
+                </div>
             </div>
         )
     }
