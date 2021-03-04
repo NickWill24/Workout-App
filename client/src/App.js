@@ -21,6 +21,8 @@ class App extends Component {
 
 componentDidMount(){
   this.getBalanceExercise()
+  this.getEnduranceExercise()
+  this.getStrengthExercise()
 }
 
 
@@ -42,6 +44,7 @@ getEnduranceExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getEndurance')
     console.log(response)
+    this.setState({enduranceArr: response.data.endurances })
   } catch(error){
     console.log('error')
   }
