@@ -34,6 +34,9 @@ getBalanceExercise= async () =>{
   }
 }
 
+addBalance= (data) =>{
+  this.setState({balanceArr:[...this.state.balanceArr, data]})
+}
 
 
 
@@ -56,6 +59,9 @@ getStrengthExercise= async () =>{
     console.log('error')
   }
 }
+addStrength= (data) =>{
+  this.setState({strengthArr:[...this.state.strengthArr, data]})
+}
 
   render(){
     console.log(this.state)
@@ -70,7 +76,7 @@ getStrengthExercise= async () =>{
             <Route path="/endurance" component={(props)=>
               <Endurance endurances={this.state.enduranceArr}/>}/>
             <Route path="/Strength" component={(props)=>
-              <Strength strengths={this.state.strengthArr} />}/>
+              <Strength strengths={this.state.strengthArr} addStrength={this.addStrength} />}/>
           </Switch>
         </main>
       </div>

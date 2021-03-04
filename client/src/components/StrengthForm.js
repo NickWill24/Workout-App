@@ -15,12 +15,14 @@ export default class StrengthForm extends Component{
     
 
     handleChange= (event) =>{
-        this.setState({strengthArr: event.target.value})
+        this.setState({[event.target.name]: event.target.value})
     }
     handleSubmit= async (e) =>{
         e.preventDefault()
         try{
-            let response = await axios.post('http://localhost:3001/api/createStrength')
+            let response = await axios.post('http://localhost:3001/api/createStrength', this.state
+            )
+            this.props.addStrength(response.data.strength)
         } catch(error){
             console.log(error)
         }

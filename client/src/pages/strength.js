@@ -15,7 +15,7 @@ export default class Strength extends Component {
         return(
             <div>
                 <h1>Strength</h1>
-                <StrengthForm/>
+                <StrengthForm addStrength={this.props.addStrength}/>
                 {this.props.strengths.map((strength, index)=>(
                     <StrengthCard 
                         key={index} 
