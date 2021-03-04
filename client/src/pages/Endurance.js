@@ -11,12 +11,12 @@ export default class Endurance extends Component {
         }
     }
     render(){
-        console.log(this.props.balances)
+        console.log(this.props.endurances)
         if(this.props){
         return(
             <div>
                 <h1>Endurance</h1>
-                <EnduranceForm/>
+                <EnduranceForm addEndurance={this.props.addEndurance} />
                 {this.props.endurances.map((endurance, index)=>(
                     <EnduranceCard 
                         key={index} 

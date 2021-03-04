@@ -35,6 +35,7 @@ getBalanceExercise= async () =>{
 }
 
 addBalance= (data) =>{
+  console.log("add balance firing")
   this.setState({balanceArr:[...this.state.balanceArr, data]})
 }
 
@@ -50,6 +51,10 @@ getEnduranceExercise= async () =>{
   }
 }
 
+addEndurance= (data) =>{
+  this.setState({enduranceArr:[...this.state.enduranceArr, data]})
+}
+
 getStrengthExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getStrength')
@@ -59,9 +64,14 @@ getStrengthExercise= async () =>{
     console.log('error')
   }
 }
+
+
 addStrength= (data) =>{
   this.setState({strengthArr:[...this.state.strengthArr, data]})
 }
+
+
+
 
   render(){
     console.log(this.state)
@@ -72,9 +82,9 @@ addStrength= (data) =>{
             
             <Route exact path="/" component={Home}/>
             <Route path="/balance" component={(props)=>
-              <Balance balances={this.state.balanceArr}/>}/>
+              <Balance balances={this.state.balanceArr} addBalance={this.addBalance} />}/>
             <Route path="/endurance" component={(props)=>
-              <Endurance endurances={this.state.enduranceArr}/>}/>
+              <Endurance endurances={this.state.enduranceArr} addEndurance={this.addEndurance} />}/>
             <Route path="/Strength" component={(props)=>
               <Strength strengths={this.state.strengthArr} addStrength={this.addStrength} />}/>
           </Switch>

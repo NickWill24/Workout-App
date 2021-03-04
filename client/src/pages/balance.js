@@ -15,7 +15,7 @@ export default class Balance extends Component {
         return(
             <div>
                 <h1>Balance</h1>
-                <BalanceForm/>
+                <BalanceForm addBalance={this.props.addBalance}/>
                 {this.props.balances.map((balance, index)=>(
                     <BalanceCard 
                         key={index} 

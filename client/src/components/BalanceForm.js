@@ -15,12 +15,14 @@ export default class BalanceForm extends Component{
     }
 
     handleChange= (event) =>{
-        this.setState({balanceArr: event.target.value})
+        this.setState({[event.target.name]: event.target.value})
     }
     handleSubmit= async (e) =>{
         e.preventDefault()
         try{
-            let response = await axios.post('http://localhost:3001/api/createBalance')
+            let response = await axios.post('http://localhost:3001/api/createBalance', this.state
+            )
+            this.props.addBalance(response.data.balance)
         } catch(error){
             console.log(error)
         }
@@ -69,8 +71,8 @@ export default class BalanceForm extends Component{
             value={numOfRep}
             onChange={this.handleChange}
             />
-            </form>
             <button>Submit</button>
+            </form>
             </div>
         )
     }
