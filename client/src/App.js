@@ -7,7 +7,7 @@ import Balance from './pages/Balance'
 import Endurance from './pages/Endurance'
 import Strength from './pages/Strength'
 import axios from 'axios'
-import e from 'cors';
+import Cors from 'cors'
 
 class App extends Component {
   constructor(){
@@ -54,6 +54,7 @@ getStrengthExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getStrength')
     console.log(response)
+    this.setState({strengthArr: response.data.strengths })
   } catch(error){
     console.log('error')
   }
