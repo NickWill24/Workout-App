@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default class StrengthForm extends Component{
     constructor(){
@@ -34,7 +35,10 @@ export default class StrengthForm extends Component{
             <div>
                 <h1>Strength execrise</h1>
                 <form onSubmit={this.handleSubmit}>
-                <button className="subbutn">Back To Home</button>
+                    <Link to='/'>
+                        <button className="subbutn">Back To Home</button>
+                    </Link>
+                
         <input
             type="text"
             name="name"
