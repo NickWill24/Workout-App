@@ -34,7 +34,7 @@ export default class BalanceForm extends Component{
             <div>
                 <h1>Balance execrise</h1>
                 <form onSubmit={this.handleSubmit}>
-                <button>Add Execrise</button>
+                <button>Back To Home</button>
         <input
             type="text"
             name="name"

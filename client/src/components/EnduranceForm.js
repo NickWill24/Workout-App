@@ -32,7 +32,7 @@ export default class EnduranceForm extends Component{
             <div>
                 <h1>Endurance execrise</h1>
                 <form onSubmit={this.handleSubmit}>
-                <button>Add Execrise</button>
+                <button>Back To Home</button>
         <input
             type="text"
             name="name"

@@ -12,18 +12,21 @@ export default class Balance extends Component {
     render(){
         console.log(this.props.balances)
         if(this.props){
+        
         return(
             <div>
+                
                 <h1>Balance</h1>
-                <BalanceForm addBalance={this.props.addBalance}/>
+                <BalanceForm addBalance={this.props.addBalance} />
                 {this.props.balances.map((balance, index)=>(
-                    <BalanceCard 
+                    <BalanceCard deleteBalance={this.props.deleteBalance}
                         key={index} 
                         image={balance.image}
                         name={balance.name}
                         numOfRep={balance.numOfRep}
                         time={balance.time}
                         description={balance.description}
+                        id={balance._id}
                     
                     
                     />

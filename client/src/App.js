@@ -39,7 +39,15 @@ addBalance= (data) =>{
   this.setState({balanceArr:[...this.state.balanceArr, data]})
 }
 
-
+deleteBalance= async (id) =>{
+  console.log(id)
+  try{
+    const response = await axios.delete(`http://localhost:3001/api/deleteBalance/${id}`)
+    this.setState({balanceArr: response.data.balances})
+  } catch(error){
+    console.log('error')
+  }
+}
 
 getEnduranceExercise= async () =>{
   try{
@@ -82,7 +90,7 @@ addStrength= (data) =>{
             
             <Route exact path="/" component={Home}/>
             <Route path="/balance" component={(props)=>
-              <Balance balances={this.state.balanceArr} addBalance={this.addBalance} />}/>
+              <Balance balances={this.state.balanceArr} addBalance={this.addBalance} deleteBalance={this.deleteBalance}/>}/>
             <Route path="/endurance" component={(props)=>
               <Endurance endurances={this.state.enduranceArr} addEndurance={this.addEndurance} />}/>
             <Route path="/Strength" component={(props)=>
