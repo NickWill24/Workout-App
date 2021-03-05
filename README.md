@@ -25,7 +25,7 @@ The Workout-App is an App that people pick the type of workout they want to do. 
 
 * React 
 
-* Mongoose 
+* Node.js
 
 
 ![mockup](image/Finalproduct.png)
