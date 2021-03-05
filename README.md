@@ -49,7 +49,6 @@ https://previews.123rf.com/images/comotomo/comotomo1901/comotomo190100741/125772
 
 
 https://cdn3.vectorstock.com/i/1000x1000/64/47/calf-stretch-exercise-silhouette-vector-25426447.jpg
-Calf Stretches 
 
 https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Fpowerlifting-silhouette%2Fpowerlifting-silhouette-7.png&f=1&nofb=1   
 
