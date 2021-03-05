@@ -31,11 +31,11 @@ export default class BalanceCard extends Component {
     if (this.state.vis === true){
         return(
             <div className="card">
+                <img className="Balexe" src={image} alt="exercise"></img>
                 <p>{name}</p>
                 <p>{description}</p>
                 <p>{numOfRep}</p>
                 <p>{time}</p>
-                {/* <img src={image}></img> */}
                 <button onClick={()=>this.deleteBalance(id)}>delete</button>
                 
             </div>

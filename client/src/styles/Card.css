@@ -27,3 +27,11 @@ padding: 20px;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     background-color: white;
 }
+
+.Balexe{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background-color: white;
+}
