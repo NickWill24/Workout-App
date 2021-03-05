@@ -34,7 +34,7 @@ export default class BalanceForm extends Component{
             <div>
                 <h1>Balance execrise</h1>
                 <form onSubmit={this.handleSubmit}>
-                <button>Back To Home</button>
+                <button className="subbutn">Back To Home</button>
         <input
             type="text"
             name="name"
@@ -71,7 +71,7 @@ export default class BalanceForm extends Component{
             value={numOfRep}
             onChange={this.handleChange}
             />
-            <button>Submit</button>
+            <button className="subbutn" >Submit</button>
             </form>
             </div>
         )

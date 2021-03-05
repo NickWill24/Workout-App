@@ -18,18 +18,17 @@ class App extends Component {
   }
 
 componentDidMount(){
-  // this.getBalanceExercise()
-  this.getBalanceExercise2()
+  this.getBalanceExercise()
   this.getEnduranceExercise()
   this.getStrengthExercise()
 }
 
 
-getBalanceExercise2 = async () =>{
+getBalanceExercise = async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getBalance')
     console.log(response, "HERE CONSOLE.LOG")
-    // this.setState({balanceArr: response.data.balances })
+    this.setState({balanceArr: response.data.balances })
   } catch(error){
     console.log('error')
   }
@@ -40,16 +39,7 @@ addBalance= (data) =>{
   this.setState({balanceArr:[...this.state.balanceArr, data]})
 }
 
-// deleteBalance= async (id) =>{
-//   console.log(id)
-//   try{
-//     const response = await axios.delete(`http://localhost:3001/api/deleteBalance/${id}`)
-//     this.setState({balanceArr: response.data.balances})
-//     console.log("delete", id, this.state.balanceArr)
-//   } catch(error){
-//     console.log('error')
-//   }
-// }
+
 
 getEnduranceExercise= async () =>{
   try{
@@ -91,14 +81,8 @@ addStrength= (data) =>{
           <Switch>
             
             <Route exact path="/" component={Home}/>
-            {/* <Route path="/balance" component={(props)=>
-              <Balance balances={this.state.balanceArr} addBalance={this.addBalance} deleteBalance={this.deleteBalance}/>}></Route> */}
-
             <Route path="/balance" component={(props)=>
               <Balance balances={this.state.balanceArr} addBalance={this.addBalance}/>}></Route>
-
-
-
             <Route path="/endurance" component={(props)=>
               <Endurance endurances={this.state.enduranceArr} addEndurance={this.addEndurance} />}/>
             <Route path="/Strength" component={(props)=>

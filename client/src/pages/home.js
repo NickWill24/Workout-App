@@ -8,6 +8,7 @@ export default class Home extends Component {
         return(
             <div className="home">
                 <h1>Home</h1>
+                <img src="https://i.imgur.com/MTClotL.png" alt="logo"></img>
                 <p>Pick A Category</p>
                 <div className="row">
                 <Link to="/balance">
@@ -26,6 +27,7 @@ export default class Home extends Component {
                     </div>
                 </Link>
                 </div>
+                
             </div>
         )
     }
