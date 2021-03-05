@@ -9,7 +9,7 @@ By: Nick Williams
 
 
 
-Trello : https://trello.com/b/0Wzx6lIb/workout-app
+
 
 
 # Description
@@ -30,6 +30,9 @@ The Workout-App is an App that people pick the type of workout they want to do. 
 
 ![mockup](image/Finalproduct.png)
 
+
+# Getted Startted 
+Trello : https://trello.com/b/0Wzx6lIb/workout-app
 
 # Future update:
 * IMAGE TO THE CATEGORY 
