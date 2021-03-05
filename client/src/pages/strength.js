@@ -24,6 +24,7 @@ export default class Strength extends Component {
                         numOfRep={strength.numOfRep}
                         time={strength.time}
                         description={strength.description}
+                        id={strength._id}
                     
                     
                     />
