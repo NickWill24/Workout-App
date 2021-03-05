@@ -3,14 +3,7 @@ import StrengthCard from '../components/StrengthCard'
 import StrengthForm from "../components/StrengthForm"
 
 export default class Strength extends Component {
-    constructor(){
-        super()
-        this.state={
-
-        }
-    }
     render(){
-        console.log(this.props.strengths)
         if(this.props){
         return(
             <div>

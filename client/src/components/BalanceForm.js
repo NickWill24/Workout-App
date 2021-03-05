@@ -32,7 +32,7 @@ export default class BalanceForm extends Component{
     const{ name, time, description, image, numOfRep}= this.state
         return(
             <div>
-                <h1>Balance execrise</h1>
+                <h1>Balance Exercise</h1>
                 <form onSubmit={this.handleSubmit}>
                     <Link to="/">
                         <button className="subbutn">Back To Home</button>

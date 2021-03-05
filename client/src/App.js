@@ -27,7 +27,6 @@ componentDidMount(){
 getBalanceExercise = async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getBalance')
-    console.log(response, "HERE CONSOLE.LOG")
     this.setState({balanceArr: response.data.balances })
   } catch(error){
     console.log('error')
@@ -35,7 +34,6 @@ getBalanceExercise = async () =>{
 }
 
 addBalance= (data) =>{
-  console.log("add balance firing")
   this.setState({balanceArr:[...this.state.balanceArr, data]})
 }
 
@@ -44,7 +42,6 @@ addBalance= (data) =>{
 getEnduranceExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getEndurance')
-    console.log(response)
     this.setState({enduranceArr: response.data.endurances })
   } catch(error){
     console.log('error')
@@ -58,7 +55,6 @@ addEndurance= (data) =>{
 getStrengthExercise= async () =>{
   try{
     const response = await axios.get('http://localhost:3001/api/getStrength')
-    console.log(response)
     this.setState({strengthArr: response.data.strengths })
   } catch(error){
     console.log('error')
@@ -74,7 +70,6 @@ addStrength= (data) =>{
 
 
   render(){
-    console.log(this.state)
     return (
       <div className="App">
         <main>

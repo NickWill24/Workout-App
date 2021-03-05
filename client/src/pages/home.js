@@ -9,6 +9,7 @@ export default class Home extends Component {
             <div className="home">
                 <h1>Home</h1>
                 <img src="https://i.imgur.com/MTClotL.png" alt="logo"></img>
+                <p>Welcome to The Workout App. Select an Category</p>
                 <p>Pick A Category</p>
                 <div className="row">
                 <Link to="/balance">

@@ -4,14 +4,7 @@ import EnduranceForm from '../components/EnduranceForm'
 
 
 export default class Endurance extends Component {
-    constructor(){
-        super()
-        this.state={
-
-        }
-    }
     render(){
-        console.log(this.props.endurances)
         if(this.props){
         return(
             <div>

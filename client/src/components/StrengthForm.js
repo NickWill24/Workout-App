@@ -33,7 +33,7 @@ export default class StrengthForm extends Component{
     const{ name, time, description, image, numOfRep}= this.state
         return(
             <div>
-                <h1>Strength execrise</h1>
+                <h1>Strength Exercise</h1>
                 <form onSubmit={this.handleSubmit}>
                     <Link to='/'>
                         <button className="subbutn">Back To Home</button>

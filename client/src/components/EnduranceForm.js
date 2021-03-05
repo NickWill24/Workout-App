@@ -31,7 +31,7 @@ export default class EnduranceForm extends Component{
     const{ name, time, description, image, numOfRep}= this.state
         return(
             <div>
-                <h1>Endurance execrise</h1>
+                <h1>Endurance Exercise</h1>
                 <form onSubmit={this.handleSubmit}>
                     <Link to="/" >
                         <button className="subbutn">Back To Home</button>

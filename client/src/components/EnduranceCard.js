@@ -12,7 +12,6 @@ export default class EnduranceCard extends Component {
     }
 
     deleteEndurance= async (id) =>{
-        console.log(id)
         try{
         const response = await axios.delete(`http://localhost:3001/api/deleteEndurance/${id}`)
         } catch(error){

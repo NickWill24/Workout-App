@@ -13,10 +13,8 @@ export default class BalanceCard extends Component {
 
 
     deleteBalance= async (id) =>{
-        console.log(id)
         try{
         const response = await axios.delete(`http://localhost:3001/api/deleteBalance/${id}`)
-        console.log("delete", id, this.state.balanceArr)
         } catch(error){
         console.log('error')
         }
@@ -27,7 +25,6 @@ export default class BalanceCard extends Component {
 
     render(){
     const{ name, description, image, time, numOfRep, id}= this.props
-    console.log(id)
     if (this.state.vis === true){
         return(
             <div className="card">

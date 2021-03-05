@@ -4,7 +4,6 @@ import BalanceForm from '../components/BalanceForm'
 
 export default class Balance extends Component {
     render(){
-        console.log(this.props)
         if(this.props){
         
         return(

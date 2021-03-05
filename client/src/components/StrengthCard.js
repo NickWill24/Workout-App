@@ -13,7 +13,6 @@ export default class StrengthCard extends Component {
 
 
     deleteStrength= async (id) =>{
-        console.log(id)
         try{
         const response = await axios.delete(`http://localhost:3001/api/deleteStrength/${id}`)
         } catch(error){
