@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../styles/Card.css'
+import  axios from 'axios'
+
 
 export default class StrengthCard extends Component {
     constructor(){

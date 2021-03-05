@@ -25,6 +25,7 @@ export default class Endurance extends Component {
                         numOfRep={endurance.numOfRep}
                         time={endurance.time}
                         description={endurance.description}
+                        id={endurance._id}
                     
                     
                     />

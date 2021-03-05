@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../styles/Card.css'
+import axios from 'axios'
+
 
 export default class BalanceCard extends Component {
     constructor(){
@@ -33,7 +35,7 @@ export default class BalanceCard extends Component {
                 <p>{description}</p>
                 <p>{numOfRep}</p>
                 <p>{time}</p>
-                <img src={image}></img>
+                {/* <img src={image}></img> */}
                 <button onClick={()=>this.deleteBalance(id)}>delete</button>
                 
             </div>
